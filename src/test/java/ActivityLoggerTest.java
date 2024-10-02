@@ -1,6 +1,5 @@
-
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 import java.sql.Date;
 import java.util.Optional;
@@ -8,12 +7,13 @@ import java.util.Optional;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+
 public class ActivityLoggerTest {
 
-    private ActivityLogger logger;
+    private static ActivityLogger logger;
 
-    @BeforeEach
-    public void setUp() {
+    @BeforeClass
+    public static void setUp() {
         logger = new ActivityLogger();
     }
 
