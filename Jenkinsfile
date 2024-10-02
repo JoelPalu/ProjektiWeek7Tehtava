@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'hhttps://github.com/JoelPalu/ProjektiWeek7Tehtava.git'
+                git 'https://github.com/JoelPalu/ProjektiWeek7Tehtava.git'
             }
         }
 
