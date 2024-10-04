@@ -1,19 +1,17 @@
-import org.junit.BeforeClass;
-import org.junit.Test;
-
 import java.sql.Date;
 import java.util.Optional;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class ActivityLoggerTest {
 
     private static ActivityLogger logger;
 
-    @BeforeClass
-    public static void setUp() {
+    @BeforeEach
+    public void setUp() {
         logger = new ActivityLogger();
     }
 
