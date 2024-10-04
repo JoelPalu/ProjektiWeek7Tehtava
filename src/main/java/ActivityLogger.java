@@ -34,7 +34,20 @@ public class ActivityLogger {
             System.out.println("--------------------");
             System.out.println("1. Log activity\n2. Display logs\n3. Count last 7 days\n4. Exit");
             System.out.println("--------------------");
-            int choice = scanner.nextInt();
+
+            int choice = 0;
+            do {
+                System.out.println("Enter choice: ");
+                try {
+                    choice = scanner.nextInt();
+                } catch (Exception e){
+                    System.out.println("Invalid choice");
+                    scanner.next();
+                }
+
+
+            } while (choice < 1 || choice > 4);
+
             switch(choice){
                 case 1:
                     System.out.println("--------------------\nLog Activity");
