@@ -30,6 +30,8 @@ public class ActivityLogger {
     public static void main(String[] args) {
         ActivityLogger logger = new ActivityLogger();
         Scanner scanner = new Scanner(System.in);
+
+
         while(true){
             System.out.println("--------------------");
             System.out.println("1. Log activity\n2. Display logs\n3. Count last 7 days\n4. Exit");
@@ -39,9 +41,15 @@ public class ActivityLogger {
             do {
                 System.out.println("Enter choice: ");
                 try {
-                    choice = scanner.nextInt();
+                    if (scanner.hasNextInt()) {
+                        choice = scanner.nextInt();
+                    }else {
+                        System.out.println("Invalid choice");
+                        System.exit(0);
+                    }
                 } catch (Exception e){
                     System.out.println("Invalid choice");
+
                     scanner.next();
                 }
 
